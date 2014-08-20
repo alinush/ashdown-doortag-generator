@@ -1,0 +1,7 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\font\ttfcustom custom at10pt
+% \newcommand\customfont[1]{{\usefont{T1}{allerrg}{m}{n} #1 }}
+\begin{document}
+\ttfcustom{hello}
+\end{document}
