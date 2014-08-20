@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 
 import sys
-import subprocess
+from subprocess import call
+from tempfile import mktemp
 
 if len(sys.argv)<3:
   print("Usage: %s listofnames.txt background.pdf" % sys.argv[0])
@@ -75,9 +76,11 @@ for i in range(0, len(names)):
 
 latex += "\\end{document}"
 
-file_latex = open("doortag.tex", "w")
+filename_latex = mktemp('tex')
+
+file_latex = open(filename_latex, "w")
 file_latex.write(latex)
 file_latex.close()
 
-subprocess.call(["xelatex", "doortag.tex"])
+call(["xelatex", "-jobname", "doortag-output", "-output-directory", ".", filename_latex])
 
