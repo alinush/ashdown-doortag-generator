@@ -1,0 +1,5 @@
+mktextfm ecrm1000
+mktextfm ecrm1000
+mktextfm ecrm1000
+mktexpk --mfmode / --bdpi 600 --mag 1+0/600 --dpi 600 custom
+mktexpk --mfmode ljfour --bdpi 600 --mag 1+0/600 --dpi 600 custom

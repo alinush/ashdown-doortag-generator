@@ -5,7 +5,7 @@ from subprocess import call
 from tempfile import mktemp
 
 if len(sys.argv)<3:
-  print("Usage: %s listofnames.txt background.pdf" % sys.argv[0])
+  print("Usage: %s sample-list.txt sample-back.pdf" % sys.argv[0])
   exit(0)
 
 filename_list = sys.argv[1]
